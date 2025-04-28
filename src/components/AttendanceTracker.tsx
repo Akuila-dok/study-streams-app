@@ -9,7 +9,7 @@ const attendanceData = [
 ];
 
 // Function to determine badge color
-const getBadge = (percentage) => {
+const getBadge = (percentage: number): string => {
   if (percentage >= 85) return "bg-green-100 text-green-700"; // Good Attendance
   if (percentage >= 60) return "bg-yellow-100 text-yellow-700"; // Average Attendance
   return "bg-red-100 text-red-700"; // Poor Attendance

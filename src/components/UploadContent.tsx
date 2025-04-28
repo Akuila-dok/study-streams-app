@@ -3,15 +3,17 @@
 import React, { useState } from "react";
 
 const UploadContent = () => {
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [file, setFile] = useState(null);
+  const [title, setTitle] = useState<string>("");
+  const [description, setDescription] = useState<string>("");
+  const [file, setFile] = useState<File | null>(null);
 
-  const handleFileChange = (e) => {
-    setFile(e.target.files[0]);
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files.length > 0) {
+      setFile(e.target.files[0]);
+    }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log({ title, description, file });
     // Implement file upload logic
@@ -25,14 +27,14 @@ const UploadContent = () => {
           type="text"
           placeholder="Content Title"
           value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setTitle(e.target.value)}
           className="border border-blue-300 focus:ring-2 focus:ring-blue-400 p-2 rounded-md outline-none"
           required
         />
         <textarea
           placeholder="Description"
           value={description}
-          onChange={(e) => setDescription(e.target.value)}
+          onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setDescription(e.target.value)}
           className="border border-blue-300 focus:ring-2 focus:ring-blue-400 p-2 rounded-md outline-none"
           required
         ></textarea>

@@ -3,16 +3,17 @@ import React, { useState } from 'react'
 import { FileText, Clock, CheckCircle } from 'lucide-react'
 import { Progress } from '@/components/ui/progress'
 
-interface AssignmentsPageProps {
-  courseName: string
-  instructorName: string
-}
-
-const AssignmentsPage: React.FC<AssignmentsPageProps> = ({ courseName, instructorName }) => {
+const AssignmentsPage = () => {
   const [selectedAssignment, setSelectedAssignment] = useState<string | null>(null)
+  
   const assignments = Array.from({ length: 5 }, (_, i) => `Assignment ${i + 1}`)
   const enrolledCourses = ['Mathematics', 'English', 'Biology', 'Chemistry', 'Agriculture']
+  
   const progress = 60
+  
+  // ❗️ Define courseName and instructorName here
+  const courseName = 'Mathematics'
+  const instructorName = 'John Doe'
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-gray-100 p-6 font-sans">

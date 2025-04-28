@@ -48,7 +48,7 @@ const GradedAssignments = () => {
               <strong>Grade:</strong> 
               <span className="text-green-600 font-semibold"> {assignment.grade}</span>
             </p>
-            <p className="text-sm text-gray-500 italic mt-2">"{assignment.feedback}"</p>
+            <p className="text-sm text-gray-500 italic mt-2">&quot;{assignment.feedback}&quot;</p>
           </div>
         ))}
       </div>

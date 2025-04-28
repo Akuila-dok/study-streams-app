@@ -9,7 +9,7 @@ const SupportAndHelpPage = () => {
       <div className="flex flex-col items-center mb-10">
         <LifeBuoy className="w-16 h-16 text-cyan-600 mb-4" />
         <h1 className="text-4xl font-bold text-cyan-800">Support & Help</h1>
-        <p className="text-gray-600 mt-2">Need assistance? We're here to help!</p>
+        <p className="text-gray-600 mt-2">Need assistance? We are here to help!</p>
       </div>
 
       {/* Support Content */}
