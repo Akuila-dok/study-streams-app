@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Study Streams School Management Dashboard",
-  description: "Next.js School Management System",
+  description: "This system was done by DevXperts",
 };
 
 export default function RootLayout({
